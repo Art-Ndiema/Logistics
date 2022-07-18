@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'main.dart';
@@ -73,7 +73,7 @@ class Notifications extends StatelessWidget {
 
             ),
             child: ListView.builder(
-        itemCount: 10,
+        itemCount: 40,
         shrinkWrap: true,
         scrollDirection: Axis.vertical,
         itemBuilder: (context, index) {
@@ -84,13 +84,22 @@ class Notifications extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               color: Colors.white,
             ),
-            child: Row(
+            child: SizedBox(
+              width: 30,
+              height: 50,
+              child: Row(
            children: [
-            Icon(Icons.local_shipping_rounded,color: Colors.indigo,),
-            Text('Document approved/n'),
-            Text('1/08/2022')
+              Icon(Icons.local_shipping_rounded,color: Colors.indigo,),
+              Column(
+                children: [
+                  Text('    Document approved       '),
+                  Text('1/08/2022')
+                ],
+              ),
+              
            ],
           ),
+            ),
           );
         }), 
 

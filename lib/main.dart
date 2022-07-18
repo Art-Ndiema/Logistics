@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:trial/profile.dart';
 import 'sign_in.dart';
 import 'notification.dart';
-void main() => runApp( MaterialApp(
+
+void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Sign(),
     ));
@@ -20,7 +22,10 @@ class Main extends StatelessWidget {
         leading: IconButton(
           color: Colors.purple,
           onPressed: () {
-            //sign up
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Sign()),
+            );
           },
           icon: Icon(
             Icons.android,
@@ -31,12 +36,17 @@ class Main extends StatelessWidget {
           IconButton(
               onPressed: () {
                 Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => Notifications()),);
+                  context,
+                  MaterialPageRoute(builder: (context) => Notifications()),
+                );
               },
               icon: const Icon(Icons.notifications)),
           IconButton(
               onPressed: () {
-                // profile page
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profile()),
+                );
               },
               icon: const Icon(Icons.account_circle_rounded)),
         ],
@@ -89,11 +99,15 @@ class Main extends StatelessWidget {
                           ),
                         ),
                       ),
-                      ),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
-                    Icon(Icons.query_stats,size: 100,color: Color.fromARGB(255, 199,161 ,206),)
+                    Icon(
+                      Icons.query_stats,
+                      size: 100,
+                      color: Color.fromARGB(255, 199, 161, 206),
+                    )
                   ],
                 ),
               ),
@@ -164,14 +178,14 @@ class Main extends StatelessWidget {
                           color: Color.fromARGB(255, 249, 216, 255),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        
                         padding: EdgeInsets.all(15.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Center(
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(30,8,15,8),
+                                padding:
+                                    const EdgeInsets.fromLTRB(30, 8, 15, 8),
                                 child: Icon(
                                   Icons.pending_actions_rounded,
                                   color: Color.fromARGB(255, 44, 183, 225),
@@ -206,9 +220,9 @@ class Main extends StatelessWidget {
                           ],
                         ),
                       ),
-                   onTap: (){
-                    //order status page
-                   },
+                      onTap: () {
+                        //order status page
+                      },
                     ),
                   );
                 },
@@ -239,113 +253,123 @@ class Main extends StatelessWidget {
               ),
             ),
             InkWell(
-              child: Container(
-                margin: EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 249, 216, 255),
-                  borderRadius: BorderRadius.circular(8),
+                child: Container(
+                  margin: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 249, 216, 255),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: EdgeInsets.all(15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text('Origin: '),
+                          Text('Mombasa', style: TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text('Destiation: '),
+                          Text('Lesotho', style: TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text('Vehicle Registration: '),
+                          Text('KBH 209X', style: TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          Text('TRA Number: '),
+                          Text('123456789',
+                              style: TextStyle(color: Colors.grey))
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-                padding: EdgeInsets.all(15.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Text('Origin: '),
-                        Text('Mombasa', style: TextStyle(color: Colors.grey))
-                      ],
-                    ),
-                    Row(
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Text('Destiation: '),
-                        Text('Lesotho', style: TextStyle(color: Colors.grey))
-                      ],
-                    ),
-                    Row(
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Text('Vehicle Registration: '),
-                        Text('KBH 209X', style: TextStyle(color: Colors.grey))
-                      ],
-                    ),
-                    Row(
-                      // ignore: prefer_const_literals_to_create_immutables
-                      children: [
-                        Text('TRA Number: '),
-                        Text('123456789', style: TextStyle(color: Colors.grey))
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-           onTap: (){
-            //Tracking info page
-                     }
-            ),
-        
-       
+                onTap: () {
+                  //Tracking info page
+                }),
           ],
         )),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-           showDialog(
-                        context: context,
-                        builder: (context) {
-                          return SimpleDialog(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(8.5))
-                            ),
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return SimpleDialog(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8.5))),
+                    children: [
+                      SimpleDialogOption(
+                          onPressed: (() {
+                            Navigator.pop(context);
+                          }),
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              SimpleDialogOption(
-                                  onPressed: (() {
-                                    Navigator.pop(context);
-                                  }),
-                                  child: Row(
-                                    // ignore: prefer_const_literals_to_create_immutables
-                                    children: [
-                                      Icon(Icons.whatsapp_outlined, color: Colors.green,),
-                                      SizedBox( width: 10),
-                                      Text('Chat Via Message')
-                                    ],
-                                  )),
-                              SizedBox(height: 10),
-                               Divider( height: 2, color: Colors.black,),
-                              SimpleDialogOption(
-                                  onPressed: (() {
-                                    Navigator.pop(context);
-                                  }),
-                                  child: Row(
-                                    // ignore: prefer_const_literals_to_create_immutables
-                                    children: [
-                                      Icon(Icons.call_rounded),
-                                      SizedBox(width: 10),
-                                      Text('Make a call')
-                                    ],
-                                  )),
-                               SizedBox(height: 10),
-                                Divider( height: 2, color: Colors.black,),
-                              SimpleDialogOption(
-                                  onPressed: (() {
-                                    Navigator.pop(context);
-                                  }),
-                                  child: Row(
-                                    // ignore: prefer_const_literals_to_create_immutables
-                                    children: [
-                                      Icon(Icons.email_rounded,color: Colors.red,),
-                                       SizedBox(width: 10),
-                                      Text('Write an email')
-                                    ],
-                                  ))
+                              Icon(
+                                Icons.whatsapp_outlined,
+                                color: Colors.green,
+                              ),
+                              SizedBox(width: 10),
+                              Text('Chat Via Message')
                             ],
-                          );
-                        });
-         }
-         ,backgroundColor: Colors.purple,
-        child: const Icon(Icons.call,
-               )),
+                          )),
+                      SizedBox(height: 10),
+                      Divider(
+                        height: 2,
+                        color: Colors.black,
+                      ),
+                      SimpleDialogOption(
+                          onPressed: (() {
+                            Navigator.pop(context);
+                          }),
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              Icon(Icons.call_rounded),
+                              SizedBox(width: 10),
+                              Text('Make a call')
+                            ],
+                          )),
+                      SizedBox(height: 10),
+                      Divider(
+                        height: 2,
+                        color: Colors.black,
+                      ),
+                      SimpleDialogOption(
+                          onPressed: (() {
+                            Navigator.pop(context);
+                          }),
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              Icon(
+                                Icons.email_rounded,
+                                color: Colors.red,
+                              ),
+                              SizedBox(width: 10),
+                              Text('Write an email')
+                            ],
+                          ))
+                    ],
+                  );
+                });
+          },
+          backgroundColor: Colors.purple,
+          child: const Icon(
+            Icons.call,
+          )),
     );
   }
 }
