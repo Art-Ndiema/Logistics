@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'editprof.dart';
+import 'Active.dart';
+import 'dashboard.dart';
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
 
@@ -50,7 +53,10 @@ class Profile extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(onPressed: (){
-                    //edit profile page
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Edit()),
+                          );
                   }, 
                    style: ElevatedButton.styleFrom(
                         primary: Color.fromARGB(255, 99, 234, 223),
@@ -70,6 +76,10 @@ class Profile extends StatelessWidget {
                child: InkWell(
                 onTap: () {
                   //Active orders page
+                   Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Active()),
+                          );
 
                 },
                  child:Row(
@@ -95,14 +105,18 @@ class Profile extends StatelessWidget {
                child: InkWell(
                 onTap: () {
                    //Dasboard page
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Dashboard()),
+                          );
 
                 },
                  child:Row(
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.query_stats_outlined,color: Colors.white,size: 30,),
+                    Icon(Icons.dashboard_customize_rounded, color:Colors.white,size: 30,),
                     SizedBox(width: 10,),
-                    Text('Tracking',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                    Text('  Dashboard',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
                      
                   ],
                  ) ,
@@ -125,9 +139,9 @@ class Profile extends StatelessWidget {
                  child:Row(
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.query_stats_outlined,color: Colors.white,size: 30,),
+                    Icon(Icons.password_outlined,color:Colors.white,size: 30,),
                     SizedBox(width: 10,),
-                    Text('Tracking',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                    Text('Update password',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
                      
                   ],
                  ) ,
@@ -150,9 +164,9 @@ class Profile extends StatelessWidget {
                  child:Row(
                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.query_stats_outlined,color: Colors.white,size: 30,),
+                    Icon(Icons.logout_outlined,color: Colors.white,size: 30,),
                     SizedBox(width: 10,),
-                    Text('Tracking',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
+                    Text('Sign out',style: TextStyle( color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
                      
                   ],
                  ) ,

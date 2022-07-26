@@ -40,7 +40,7 @@ class Main extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Notifications()),
                 );
               },
-              icon: const Icon(Icons.notifications)),
+              icon: const Icon(Icons.notifications_none_outlined)),
           IconButton(
               onPressed: () {
                   Navigator.push(

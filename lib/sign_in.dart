@@ -30,6 +30,7 @@ class Sign extends StatelessWidget {
                     maxLines: 1,
                     decoration: InputDecoration(
                       hintText: 'Enter your user ID',
+                      labelText: 'hello',
                       prefixIcon: Icon(
                         Icons.person,
                         color: Color.fromARGB(255, 199, 161, 206),
