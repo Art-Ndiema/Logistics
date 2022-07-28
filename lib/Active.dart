@@ -13,7 +13,7 @@ class Active extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true,
         backgroundColor: Colors.white,
-        title: const Text('Active Orders',
+        title:  Text('Active Orders',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: Colors.black)),
         leading: IconButton(
             onPressed: () {
@@ -116,34 +116,39 @@ class Active extends StatelessWidget {
             child: Container(
               height: kToolbarHeight,
               color: Colors.white,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Sort List',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 152, 235, 246),
-                      borderRadius: BorderRadius.circular(25)
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(15,0,15,0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Sort List',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                     ),
-                    child: Center(
-                      child: IconButton(
-                        icon: Icon(
-                      Icons.filter_list_sharp,
-                      color: Color.fromARGB(255, 255, 75, 204),
-                          size: 30,
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 152, 235, 246),
+                        borderRadius: BorderRadius.circular(50)
+                      ),
+                      child: Center(
+                        child: IconButton(
+                          icon: Icon(
+                        Icons.filter_list_outlined,
+                        color: Colors.black,
+                            size: 30,
+                          ),
+                          onPressed: () {
+                            //idk
+                          },
+                          alignment: Alignment.topRight,
                         ),
-                        onPressed: () {},
-                        alignment: Alignment.topRight,
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:trial/profile.dart';
 import 'sign_in.dart';
 import 'notification.dart';
-
+import 'Active.dart';
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Sign(),
@@ -240,7 +240,10 @@ class Main extends StatelessWidget {
                     onPressed: (() {}),
                     child: InkWell(
                         onTap: () {
-                          //pending Orders page
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Active()),
+                          );
                         },
                         child: Text(
                           'see all',
