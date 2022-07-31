@@ -5,6 +5,7 @@ import 'package:trial/profile.dart';
 import 'sign_in.dart';
 import 'notification.dart';
 import 'Active.dart';
+import 'Trackinginfo.dart';
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Sign(),
@@ -300,6 +301,10 @@ class Main extends StatelessWidget {
                 ),
                 onTap: () {
                   //Tracking info page
+                   Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Tracking()),
+                          );
                 }),
           ],
         )),

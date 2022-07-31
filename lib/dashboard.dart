@@ -15,10 +15,7 @@ class Dashboard extends StatelessWidget {
             elevation: 0,        
             leading: IconButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Profile()),
-                  );
+                  Navigator.pop(context);
                 },
              
                 icon: Icon(
