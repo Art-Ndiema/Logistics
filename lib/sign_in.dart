@@ -15,10 +15,10 @@ class Sign extends StatelessWidget {
           child: Column(
             children: [
               Icon(Icons.android_rounded,
-                  color: Colors.purpleAccent, size: 150),
+                  color: Color.fromARGB(235, 71, 10, 183), size: 150),
               Text("Sign in",
                   style: TextStyle(
-                    color: Color.fromARGB(255, 191, 23, 206),
+                   color: Color.fromARGB(255, 71, 10, 183),
                     fontWeight: FontWeight.w500,
                     fontSize: 50,
                   )),
@@ -72,8 +72,9 @@ class Sign extends StatelessWidget {
                },
               child: Text
               ('Forgot your password ?',style: TextStyle(color: Colors.blue,decoration: TextDecoration.underline),)),
+            
                ),
-             //sign in button
+            SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // main Page
@@ -81,8 +82,8 @@ class Sign extends StatelessWidget {
                       context,MaterialPageRoute(builder: (context) => Main()),);
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  fixedSize: Size(200, 50),
+                  primary:Color.fromARGB(255, 71, 10, 183),
+                  fixedSize: Size(250, 60),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
                 ),

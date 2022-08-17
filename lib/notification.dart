@@ -9,9 +9,9 @@ class Notifications extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 225, 147, 239),
+      backgroundColor:Color.fromARGB(255, 222, 207, 250),
       appBar: AppBar(
-        backgroundColor:Color.fromARGB(255, 225, 147, 239) ,
+        backgroundColor:Color.fromARGB(255, 222, 207, 250) ,
         elevation: 0,
         leading: IconButton(
                         onPressed: () {

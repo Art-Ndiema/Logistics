@@ -1,11 +1,16 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:trial/pending.dart';
 import 'package:trial/profile.dart';
+import 'package:trial/upload_docs.dart';
 import 'sign_in.dart';
 import 'notification.dart';
 import 'Active.dart';
 import 'Trackinginfo.dart';
+import 'pending.dart';
+import 'upload_docs.dart';
+
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Sign(),
@@ -18,10 +23,11 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.white,
         leading: IconButton(
-          color: Colors.purple,
+          color: Color.fromARGB(255, 71, 10, 183),
           onPressed: () {
             Navigator.push(
               context,
@@ -44,15 +50,15 @@ class Main extends StatelessWidget {
               icon: const Icon(Icons.notifications_none_outlined)),
           IconButton(
               onPressed: () {
-                  Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Profile()),
                 );
               },
-              icon: const Icon(Icons.account_circle_rounded)),
+              icon: const Icon(Icons.account_circle_outlined)),
         ],
         actionsIconTheme: const IconThemeData(
-            size: 40.0, color: Colors.purple, opacity: 10.0),
+            size: 40.0, color: Color.fromARGB(255, 71, 10, 183), opacity: 10.0),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -66,7 +72,7 @@ class Main extends StatelessWidget {
                 height: 300,
                 padding: EdgeInsets.fromLTRB(25, 8, 10, 20),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 170, 12, 198),
+                  color: Color.fromARGB(255, 71, 10, 183),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -124,9 +130,13 @@ class Main extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       // upload docs Page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Upload()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.purple,
+                      primary: Color.fromARGB(255, 71, 10, 183),
                       fixedSize: Size(200, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45)),
@@ -153,6 +163,10 @@ class Main extends StatelessWidget {
                     child: InkWell(
                         onTap: () {
                           //pending Orders page
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Pending()),
+                          );
                         },
                         child: Text(
                           'see all',
@@ -176,7 +190,7 @@ class Main extends StatelessWidget {
                     child: InkWell(
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 249, 216, 255),
+                          color: Color.fromARGB(255, 222, 207, 250),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         padding: EdgeInsets.all(15.0),
@@ -241,7 +255,7 @@ class Main extends StatelessWidget {
                     onPressed: (() {}),
                     child: InkWell(
                         onTap: () {
-                            Navigator.push(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => Active()),
                           );
@@ -260,7 +274,7 @@ class Main extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 249, 216, 255),
+                    color: Color.fromARGB(255, 222, 207, 250),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   padding: EdgeInsets.all(15.0),
@@ -301,10 +315,10 @@ class Main extends StatelessWidget {
                 ),
                 onTap: () {
                   //Tracking info page
-                   Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Tracking()),
-                          );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tracking()),
+                  );
                 }),
           ],
         )),
@@ -374,7 +388,7 @@ class Main extends StatelessWidget {
                   );
                 });
           },
-          backgroundColor: Colors.purple,
+          backgroundColor: Color.fromARGB(255, 71, 10, 183),
           child: const Icon(
             Icons.call,
           )),

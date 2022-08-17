@@ -26,10 +26,10 @@ class Update extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-            Center(child: Icon(Icons.update_outlined,color: Colors.purple,size: 50,)),
-            Center(child: Text('Update Password',style: TextStyle(fontWeight: FontWeight.bold,color:Colors.purple,fontSize:30),)),
+            Center(child: Icon(Icons.update_outlined,color:Color.fromARGB(255, 71, 10, 183),size: 50,)),
+            Center(child: Text('Update Password',style: TextStyle(fontWeight: FontWeight.bold,color: Color.fromARGB(255, 71, 10, 183),fontSize:30),)),
             SizedBox(height: 15,),
-            Text('Enter current password',style: TextStyle(color: Colors.purple),),
+            Text('Enter current password',style: TextStyle(color:Color.fromARGB(255, 71, 10, 183),),),
             
              Container(
                       padding: EdgeInsets.all(8),
@@ -49,7 +49,7 @@ class Update extends StatelessWidget {
                     ),
                   ),
       
-                    Text('Enter new password',style: TextStyle(color: Colors.purple),),
+                    Text('Enter new password',style: TextStyle(color: Color.fromARGB(255, 71, 10, 183),),),
             
              Container(
                         padding: EdgeInsets.all(8),
@@ -70,7 +70,7 @@ class Update extends StatelessWidget {
                   ),
       
       
-        Text('Re-enter new password',style: TextStyle(color: Colors.purple),),
+        Text('Re-enter new password',style: TextStyle(color: Color.fromARGB(255, 71, 10, 183),),),
             
              Container(
                     padding: EdgeInsets.all(8),
@@ -98,7 +98,7 @@ class Update extends StatelessWidget {
                      
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.purple,
+                      primary: Color.fromARGB(255, 1, 35, 159),
                       fixedSize: Size(250, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45)),

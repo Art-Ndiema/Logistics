@@ -16,22 +16,25 @@ class forgot_pass extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-           child: Center(
+           child: Padding(
+             padding: const EdgeInsets.fromLTRB(10,15,10,15),
              child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
-                    Icon(Icons.lock_reset_rounded,
-                      color: Colors.purpleAccent, size: 100),
+                     SizedBox(height: 30,),
+                    Icon(Icons.lock_reset_rounded,size: 90,
+                      color: Color.fromARGB(255, 71, 10, 183),),
+                   
                   Text("Forgot Your Password ?",
                       style: TextStyle(
-                        color: Color.fromARGB(255, 191, 23, 206),
+                          color: Color.fromARGB(255, 71, 10, 183),
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                       )),
-                      Padding(
-                        padding:  EdgeInsets.fromLTRB(10,10,10,0),
-                        child: Text("Enter the email associated with this account",style: TextStyle(color:Colors.purple,)),
-                      ),
+                      SizedBox(height: 20,),
+                      Text("Enter the email associated with this account",style: TextStyle(color:Colors.purple,)),
+                         SizedBox(height: 20,),
                       Container(
                   padding: EdgeInsets.fromLTRB (8,20,8,30),
                   child: TextFormField(
@@ -47,6 +50,7 @@ class forgot_pass extends StatelessWidget {
                       ),
                     ),
                   )),
+                     SizedBox(height: 30,),
                 ElevatedButton(
                 onPressed: () {
                   // sign in Page
@@ -56,11 +60,12 @@ class forgot_pass extends StatelessWidget {
                     );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                  fixedSize: Size(200,60),
+                  primary:Color.fromARGB(255, 71, 10, 183),
+                  fixedSize: Size(250,50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
                 ),
+                
                 child:  Text(
                   'Reset your password',
                   style: TextStyle(
@@ -68,6 +73,7 @@ class forgot_pass extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 20,),
                Text("Already have an account ?  "),
               InkWell( onTap: () {
                 Navigator.push(
@@ -75,7 +81,7 @@ class forgot_pass extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => Sign()),
                     );
               },
-                child: Text('Sign in',style: TextStyle(color: Colors.blue,decoration: TextDecoration.underline),))
+                child: Text('Sign in',style: TextStyle(color: Color.fromARGB(255, 22, 9, 209),decoration: TextDecoration.underline,fontWeight: FontWeight.w500),))
                                ]
                 ),
            ),
@@ -142,7 +148,7 @@ class forgot_pass extends StatelessWidget {
                           );
                         });
                   },
-                  child: Text('Contact us',style: TextStyle(color: Colors.blue,decoration: TextDecoration.underline),))
+                  child: Text('Contact us',style: TextStyle(color: Color.fromARGB(255, 22, 9, 209),decoration: TextDecoration.underline,fontWeight: FontWeight.w500),))
           ],
         ),
             ))

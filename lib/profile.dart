@@ -13,10 +13,10 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 225, 147, 239),
+      backgroundColor:Color.fromARGB(255, 71, 10, 183),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color.fromARGB(255, 225, 147, 239),
+        backgroundColor: Color.fromARGB(255, 71, 10, 183),
         centerTitle: true,
         title: Text('Profile',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
@@ -59,7 +59,7 @@ class Profile extends StatelessWidget {
           ),
           Center(
               child: Text(
-            'Testing @gmail.com',
+            'Testing @gmail.com', style: TextStyle(color: Colors.grey),
           )),
           Center(
             child: Padding(
@@ -72,7 +72,7 @@ class Profile extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 99, 234, 223),
+                    primary: Colors.orange,
                     fixedSize: Size(200, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(45)),
@@ -98,7 +98,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.query_stats_outlined,
-                    color: Colors.white,
+                    color: Colors.orange,
                     size: 30,
                   ),
                   SizedBox(
@@ -137,7 +137,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.dashboard_customize_rounded,
-                    color: Colors.white,
+                    color: Colors.orange,
                     size: 30,
                   ),
                   SizedBox(
@@ -175,7 +175,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.password_outlined,
-                    color: Colors.white,
+                    color: Colors.orange,
                     size: 30,
                   ),
                   SizedBox(
@@ -235,7 +235,7 @@ class Profile extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.logout_outlined,
-                    color: Colors.white,
+                    color: Colors.orange,
                     size: 30,
                   ),
                   SizedBox(

@@ -1,27 +1,22 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:trial/Trackinginfo.dart';
-import 'profile.dart';
-import 'Trackinginfo.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-class Active extends StatelessWidget {
-  const Active({Key? key}) : super(key: key);
+class Pending extends StatelessWidget {
+  const Pending({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        elevation: 0.0,
-        centerTitle: true,
+    return Scaffold(appBar: AppBar(
+      elevation: 0.0,
+      centerTitle: true,
         backgroundColor: Colors.white,
-        title: Text('Active Orders',
+        title: Text('Pending Orders',
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.black)),
-        leading: IconButton(
+                 leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
             },
@@ -29,17 +24,8 @@ class Active extends StatelessWidget {
               Icons.arrow_back_ios_new,
               color: Colors.black,
             )),
-      ),
-      body: Stack(
-        
-        children: [
-          
-          Positioned(
-            left: 0,
-            right: 0,
-            bottom: 0,
-            top: kToolbarHeight,
-            child: ListView.builder(
+    ),
+    body: ListView.builder(
                 itemCount: 10,
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
@@ -65,17 +51,20 @@ class Active extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Container(
-                                  height: 30,
-                                  width: 30,
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(255, 222, 207, 250),
-                                      borderRadius: BorderRadius.circular(25)),
-                                  child: Center(
-                                      child: Icon(Icons.check_circle_outline))),
+                              Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Container(
+                                    height: 30,
+                                    width: 30,
+                                    decoration: BoxDecoration(
+                                        color: Colors.orange,
+                                        borderRadius: BorderRadius.circular(25)),
+                                    child: Center(
+                                        child: Icon(Icons.hourglass_empty_rounded))),
+                              ),
                               SizedBox(width: 10),
                               Text(
-                                'Text 1u9468789089',
+                                'AWH347HJKWE',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -107,12 +96,8 @@ class Active extends StatelessWidget {
                               alignment: Alignment.bottomCenter,
                               child: ElevatedButton(
                                 onPressed: () {
-                                  //Tracking Info page
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Tracking()),
-                                  );
+                                  //Order Status page
+                                 
                                 },
                                 style: ElevatedButton.styleFrom(
                                   primary: Color.fromARGB(255, 222, 207, 250),
@@ -123,8 +108,8 @@ class Active extends StatelessWidget {
                                 child: Text(
                                   'More details',
                                   style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 71, 10, 183),fontSize: 20),
+                                      fontWeight: FontWeight.bold,fontSize: 20,
+                                      color: Color.fromARGB(255, 9, 11, 147),),
                                 ),
                               ),
                             ),
@@ -132,52 +117,6 @@ class Active extends StatelessWidget {
                         ]),
                   );
                 }),
-          ),
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: kToolbarHeight,
-              color: Colors.white,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Sort List',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                    ),
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 222, 207, 250),
-                          borderRadius: BorderRadius.circular(50)),
-                      child: Center(
-                        child: IconButton(
-                          icon: Icon(
-                            Icons.filter_list_outlined,
-                            color: Colors.black,
-                            size: 30,
-                          ),
-                          onPressed: () {
-                            //idk
-                          },
-                          alignment: Alignment.topRight,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

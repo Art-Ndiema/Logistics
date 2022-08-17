@@ -14,7 +14,7 @@ class Edit extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 225, 147, 239),
+            backgroundColor: Color.fromARGB(255, 1, 35, 159),
             elevation: 0,
             toolbarHeight: 100,
             leading: IconButton(
@@ -33,7 +33,7 @@ class Edit extends StatelessWidget {
             children: [
               Container(
                 height: kToolbarHeight,
-                color: Color.fromARGB(255, 225, 147, 239),
+                color: Color.fromARGB(255, 1, 35, 159),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -41,9 +41,9 @@ class Edit extends StatelessWidget {
                       children: [
                         Text(
                           'Testing testing ',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
                         ),
-                        Text('Testing@gmail.com'),
+                        Text('Testing@gmail.com', style: TextStyle(color: Colors.white),),
                       ],
                     ),
                   ],
@@ -136,7 +136,7 @@ class Edit extends StatelessWidget {
                 onPressed: () {
                   //Cancel
                 },
-                 style: ElevatedButton.styleFrom(side: BorderSide(width: 5.0, color: Colors.purple,),
+                 style: ElevatedButton.styleFrom(side: BorderSide(width: 5.0, color:Color.fromARGB(255, 1, 35, 159),),
                   primary: Colors.white,
                   fixedSize: Size(150, 50),
                   shape: RoundedRectangleBorder(
@@ -146,7 +146,7 @@ class Edit extends StatelessWidget {
                   'Cancel',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.purple
+                    color:Color.fromARGB(255, 1, 35, 159),
                   ),
                 ),
               ),
@@ -157,7 +157,7 @@ SizedBox(width: 20,),
                   //update
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
+                  primary:Color.fromARGB(255, 1, 35, 159),
                   fixedSize: Size(150, 50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
