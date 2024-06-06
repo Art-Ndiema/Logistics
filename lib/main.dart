@@ -257,7 +257,7 @@ class Main extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Active()),
+                             
                           );
                         },
                         child: Text(
