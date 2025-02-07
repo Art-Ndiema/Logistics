@@ -49,7 +49,7 @@ class Tracking extends StatelessWidget {
                   margin: EdgeInsets.all(15),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         SizedBox(
                           height: 12,
                         ),
@@ -194,8 +194,7 @@ class Tracking extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     side: BorderSide(
                       color: Color.fromARGB(255, 9, 11, 147),
-                    ),
-                    primary: Colors.white,
+                    ), backgroundColor: Colors.white,
                     fixedSize: Size(300, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(45)),
@@ -216,7 +215,7 @@ class Tracking extends StatelessWidget {
                   children: [
                     Text('More Details', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
                     Row(
-                      children: [
+                      children: const [
                         Text('Status:',style: TextStyle(fontSize: 20),),
                         SizedBox(width: 10,),
                         Text('On transit',style: TextStyle(color: Colors.grey),),
@@ -224,7 +223,7 @@ class Tracking extends StatelessWidget {
                       ],
                     ),
                      Row(
-                      children: [
+                      children: const [
                         Text('TRA number:',style: TextStyle(fontSize: 20),),
                         SizedBox(width: 10,),
                         Text('AS224568GFDS5',style: TextStyle(color: Colors.grey),),
@@ -232,7 +231,7 @@ class Tracking extends StatelessWidget {
                       ],
                     ),
                      Row(
-                      children: [
+                      children: const [
                         Text('Reciept number:',style: TextStyle(fontSize: 20),),
                         SizedBox(width: 10,),
                         Text('123456',style: TextStyle(color: Colors.grey),),
@@ -240,7 +239,7 @@ class Tracking extends StatelessWidget {
                       ],
                     ),
                      Row(
-                      children: [
+                      children: const [
                         Text('Registration date:',style: TextStyle(fontSize: 20),),
                         SizedBox(width: 10,),
                         Text('01/07/2022',style: TextStyle(color: Colors.grey),),
@@ -248,7 +247,7 @@ class Tracking extends StatelessWidget {
                       ],
                     ),
                      Row(
-                      children: [
+                      children: const [
                         Text('Estimated delivery date:',style: TextStyle(fontSize: 20),),
                         SizedBox(width: 10,),
                         Text('01/12/2022',style: TextStyle(color: Colors.grey),),

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class Upload extends StatelessWidget {
+class Upload extends StatefulWidget {
   const Upload({Key? key}) : super(key: key);
+
+  @override
+  State<Upload> createState() => _UploadState();
+}
+
+class _UploadState extends State<Upload> {
+  int _activeCurrentStep = 0;  // Add this state variable
+
   List<Step> stepList() => [
         const Step(
             title: Text('B/L Documents'),
@@ -20,18 +26,17 @@ class Upload extends StatelessWidget {
             content: Center(
               child: Text('Confirm'),
             )),
-             const Step(
+        const Step(
             title: Text('Payments'),
             content: Center(
               child: Text('Confirm'),
             )),
-         const Step(
+        const Step(
             title: Text('Container loaded'),
             content: Center(
               child: Text('Confirm'),
             )),
-                
-              ];
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +44,8 @@ class Upload extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-        title: Text('Upload Documents',
+        backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
+        title: const Text('Upload Documents',
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -57,12 +62,21 @@ class Upload extends StatelessWidget {
       body: Stepper(
         currentStep: _activeCurrentStep,
         steps: stepList(),
-        onStepContinue: (){
-          if ( _activeCurrentStep < (stepList().length -1)) {
-            setState ````````````````````
+        onStepContinue: () {
+          if (_activeCurrentStep < (stepList().length - 1)) {
+            setState(() {
+              _activeCurrentStep += 1;
+            });
           }
         },
-        ),
+        onStepCancel: () {
+          if (_activeCurrentStep > 0) {
+            setState(() {
+              _activeCurrentStep -= 1;
+            });
+          }
+        },
+      ),
     );
   }
 }

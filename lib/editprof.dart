@@ -136,8 +136,7 @@ class Edit extends StatelessWidget {
                 onPressed: () {
                   //Cancel
                 },
-                 style: ElevatedButton.styleFrom(side: BorderSide(width: 5.0, color:Color.fromARGB(255, 1, 35, 159),),
-                  primary: Colors.white,
+                 style: ElevatedButton.styleFrom(side: BorderSide(width: 5.0, color:Color.fromARGB(255, 1, 35, 159),), backgroundColor: Colors.white,
                   fixedSize: Size(150, 50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
@@ -157,7 +156,7 @@ SizedBox(width: 20,),
                   //update
                 },
                 style: ElevatedButton.styleFrom(
-                  primary:Color.fromARGB(255, 1, 35, 159),
+                  backgroundColor: Color.fromARGB(255, 1, 35, 159),
                   fixedSize: Size(150, 50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),

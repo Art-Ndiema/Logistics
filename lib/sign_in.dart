@@ -1,8 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:trial/main.dart';
 import 'forgot_pass.dart';
+
 class Sign extends StatelessWidget {
   Sign({Key? key}) : super(key: key);
   TextEditingController nameController = TextEditingController();
@@ -14,23 +13,23 @@ class Sign extends StatelessWidget {
             child: SingleChildScrollView(
           child: Column(
             children: [
-              Icon(Icons.android_rounded,
+              const Icon(Icons.android_rounded,
                   color: Color.fromARGB(235, 71, 10, 183), size: 150),
-              Text("Sign in",
+              const Text("Sign in",
                   style: TextStyle(
-                   color: Color.fromARGB(255, 71, 10, 183),
+                    color: Color.fromARGB(255, 71, 10, 183),
                     fontWeight: FontWeight.w500,
                     fontSize: 50,
                   )),
 
               //user ID box
               Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   child: TextFormField(
                     maxLines: 1,
                     decoration: InputDecoration(
                       hintText: 'Enter your user ID',
-                        prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.person,
                         color: Color.fromARGB(255, 199, 161, 206),
                       ),
@@ -39,18 +38,18 @@ class Sign extends StatelessWidget {
                       ),
                     ),
                   )),
-             SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               //password box
 
               Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: TextFormField(
                   maxLines: 1,
                   obscureText: true,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.lock,
                       color: Color.fromARGB(255, 199, 161, 206),
                     ),
@@ -62,59 +61,64 @@ class Sign extends StatelessWidget {
                 ),
               ),
               //forgot password
-               Padding(
-                 padding:  EdgeInsets.fromLTRB(180,0,0,12),
-                 child: InkWell( 
-                  onTap: () {
-                    //forgot password page
-                    Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => forgot_pass()),);
-               },
-              child: Text
-              ('Forgot your password ?',style: TextStyle(color: Colors.blue,decoration: TextDecoration.underline),)),
-            
-               ),
-            SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(180, 0, 0, 12),
+                child: InkWell(
+                    onTap: () {
+                      //forgot password page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => forgot_pass()),
+                      );
+                    },
+                    child: const Text(
+                      'Forgot your password ?',
+                      style: TextStyle(
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline),
+                    )),
+              ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // main Page
                   Navigator.push(
-                      context,MaterialPageRoute(builder: (context) => Main()),);
+                    context,
+                    MaterialPageRoute(builder: (context) => Main()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary:Color.fromARGB(255, 71, 10, 183),
-                  fixedSize: Size(250, 60),
+                  backgroundColor: Color.fromARGB(255, 71, 10, 183),
+                  fixedSize: const Size(250, 60),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
                 ),
-                child:  Text(
+                child: const Text(
                   'Sign in',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-             
             ],
           ),
-          )),
-    
-                bottomNavigationBar: BottomAppBar(
+        )),
+        bottomNavigationBar: BottomAppBar(
             child: Container(
-              padding: EdgeInsets.all(15),
-              child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-              Text("Have a problem?  "),
+          padding: const EdgeInsets.all(15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Have a problem?  "),
               InkWell(
                   onTap: () {
                     showDialog(
                         context: context,
                         builder: (context) {
                           return SimpleDialog(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(8.5))
-                            ),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8.5))),
                             children: [
                               SimpleDialogOption(
                                   onPressed: (() {
@@ -123,18 +127,24 @@ class Sign extends StatelessWidget {
                                   child: Row(
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
-                                      Icon(Icons.whatsapp_outlined, color: Colors.green,),
-                                      SizedBox( width: 10),
-                                      Text('Chat Via Message')
+                                      Icon(
+                                        Icons.wechat_outlined,
+                                        color: Colors.green,
+                                      ),
+                                      const SizedBox(width: 10),
+                                      const Text('Chat Via Message')
                                     ],
                                   )),
-                              SizedBox(height: 10),
-                               Divider( height: 2, color: Colors.black,),
+                              const SizedBox(height: 10),
+                              const Divider(
+                                height: 2,
+                                color: Colors.black,
+                              ),
                               SimpleDialogOption(
                                   onPressed: (() {
                                     Navigator.pop(context);
                                   }),
-                                  child: Row(
+                                  child: const Row(
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
                                       Icon(Icons.call_rounded),
@@ -142,17 +152,23 @@ class Sign extends StatelessWidget {
                                       Text('Make a call')
                                     ],
                                   )),
-                               SizedBox(height: 10),
-                                Divider( height: 2, color: Colors.black,),
+                              const SizedBox(height: 10),
+                              const Divider(
+                                height: 2,
+                                color: Colors.black,
+                              ),
                               SimpleDialogOption(
                                   onPressed: (() {
                                     Navigator.pop(context);
                                   }),
-                                  child: Row(
+                                  child: const Row(
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
-                                      Icon(Icons.email_rounded,color: Colors.red,),
-                                       SizedBox(width: 10),
+                                      Icon(
+                                        Icons.email_rounded,
+                                        color: Colors.red,
+                                      ),
+                                      SizedBox(width: 10),
                                       Text('Write an email')
                                     ],
                                   ))
@@ -160,9 +176,14 @@ class Sign extends StatelessWidget {
                           );
                         });
                   },
-                  child: Text('Contact us',style: TextStyle(color: Colors.blue,decoration: TextDecoration.underline),))
-          ],
-        ),
-            )));
+                  child: const Text(
+                    'Contact us',
+                    style: TextStyle(
+                        color: Colors.blue,
+                        decoration: TextDecoration.underline),
+                  ))
+            ],
+          ),
+        )));
   }
 }

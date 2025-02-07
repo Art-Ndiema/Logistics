@@ -72,7 +72,7 @@ class Profile extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.orange,
+                    backgroundColor: Colors.orange,
                     fixedSize: Size(200, 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(45)),
@@ -218,8 +218,7 @@ class Profile extends StatelessWidget {
                                     padding: const EdgeInsets.fromLTRB(68,10,20,10),
                                     child: Row( crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        TextButton(onPressed: (){}, child: Text('Yes' ,style: TextStyle(color: Colors.black),)
-                                        ,style: TextButton.styleFrom( shadowColor: Colors.grey)),
+                                        TextButton(onPressed: (){},style: TextButton.styleFrom( shadowColor: Colors.grey), child: Text('Yes' ,style: TextStyle(color: Colors.black),)),
                                         SizedBox(width: 30,),
                                          TextButton(onPressed: (){}, child: Text('No'  ,style: TextStyle(color: Colors.black))),
                                       ],

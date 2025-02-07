@@ -98,7 +98,7 @@ class Update extends StatelessWidget {
                      
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 1, 35, 159),
+                      backgroundColor: Color.fromARGB(255, 1, 35, 159),
                       fixedSize: Size(250, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45)),

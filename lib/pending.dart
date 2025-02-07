@@ -11,7 +11,7 @@ class Pending extends StatelessWidget {
       elevation: 0.0,
       centerTitle: true,
         backgroundColor: Colors.white,
-        title: Text('Pending Orders',
+        title: const Text('Pending Orders',
             style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -32,7 +32,7 @@ class Pending extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
                           offset: Offset(0, 1),
@@ -43,8 +43,8 @@ class Pending extends StatelessWidget {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    padding: EdgeInsets.all(15.0),
-                    margin: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15.0),
+                    margin: const EdgeInsets.all(15),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -59,32 +59,32 @@ class Pending extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         color: Colors.orange,
                                         borderRadius: BorderRadius.circular(25)),
-                                    child: Center(
+                                    child: const Center(
                                         child: Icon(Icons.hourglass_empty_rounded))),
                               ),
-                              SizedBox(width: 10),
-                              Text(
+                              const SizedBox(width: 10),
+                              const Text(
                                 'AWH347HJKWE',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                             ],
                           ),
-                          Text('Pickup: '),
-                          Text(
+                          const Text('Pickup: '),
+                          const Text(
                             'Mombasa \n',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text('Destination: '),
-                          Text(
+                          const Text('Destination: '),
+                          const Text(
                             'Lesotho \n',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text('Status: '),
-                          Text(
+                          const Text('Status: '),
+                          const Text(
                             'On Transit \n',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -100,12 +100,12 @@ class Pending extends StatelessWidget {
                                  
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 222, 207, 250),
-                                  fixedSize: Size(300, 50),
+                                  backgroundColor: Color.fromARGB(255, 222, 207, 250),
+                                  fixedSize: const Size(300, 50),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(45)),
                                 ),
-                                child: Text(
+                                child: const Text(
                                   'More details',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,fontSize: 20,

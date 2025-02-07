@@ -36,7 +36,7 @@ class Dashboard extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: const [
                   Column(
                     children: [
                       Text('Testing Test',
@@ -56,7 +56,7 @@ class Dashboard extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(60, 20, 30, 20),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Column(
                       children: [
                         Text('Active orders',
@@ -141,7 +141,7 @@ class Dashboard extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Column(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         Icons.receipt_long_outlined,
                                         size: 40,
@@ -178,7 +178,7 @@ class Dashboard extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Column(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         Icons.anchor_outlined,
                                         size: 40,
@@ -215,7 +215,7 @@ class Dashboard extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Column(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         Icons.local_police_outlined,
                                         size: 40,
@@ -252,7 +252,7 @@ class Dashboard extends StatelessWidget {
                                 child: Padding(
                                   padding: const EdgeInsets.all(15.0),
                                   child: Column(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         Icons.info_outlined,
                                         size: 40,

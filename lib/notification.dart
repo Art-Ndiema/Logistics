@@ -44,6 +44,7 @@ class Notifications extends StatelessWidget {
             height:MediaQuery.of(context).size.height*0.1,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // ignore: duplicate_ignore
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 Text("Notifications",

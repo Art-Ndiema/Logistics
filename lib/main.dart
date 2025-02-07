@@ -6,10 +6,8 @@ import 'package:trial/profile.dart';
 import 'package:trial/upload_docs.dart';
 import 'sign_in.dart';
 import 'notification.dart';
-import 'Active.dart';
-import 'Trackinginfo.dart';
-import 'pending.dart';
-import 'upload_docs.dart';
+import 'active.dart';
+import 'trackinginfo.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -17,7 +15,7 @@ void main() => runApp(MaterialApp(
     ));
 
 class Main extends StatelessWidget {
-  Main({Key? key}) : super(key: key);
+  const Main({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +134,7 @@ class Main extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 71, 10, 183),
+                      backgroundColor: Color.fromARGB(255, 71, 10, 183),
                       fixedSize: Size(200, 50),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(45)),
@@ -196,11 +194,11 @@ class Main extends StatelessWidget {
                         padding: EdgeInsets.all(15.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Center(
                               child: Padding(
                                 padding:
-                                    const EdgeInsets.fromLTRB(30, 8, 15, 8),
+                                    EdgeInsets.fromLTRB(30, 8, 15, 8),
                                 child: Icon(
                                   Icons.pending_actions_rounded,
                                   color: Color.fromARGB(255, 44, 183, 225),
@@ -256,9 +254,9 @@ class Main extends StatelessWidget {
                     child: InkWell(
                         onTap: () {
                           Navigator.push(
-                            context,
-                             
-                          );
+  context,
+  MaterialPageRoute(builder: (context) => Active()),
+);
                         },
                         child: Text(
                           'see all',
@@ -280,7 +278,7 @@ class Main extends StatelessWidget {
                   padding: EdgeInsets.all(15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Row(
                         // ignore: prefer_const_literals_to_create_immutables
                         children: [
@@ -340,7 +338,7 @@ class Main extends StatelessWidget {
                             // ignore: prefer_const_literals_to_create_immutables
                             children: [
                               Icon(
-                                Icons.whatsapp_outlined,
+                                Icons.wechat_outlined,
                                 color: Colors.green,
                               ),
                               SizedBox(width: 10),

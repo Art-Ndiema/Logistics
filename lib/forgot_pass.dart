@@ -60,7 +60,7 @@ class forgot_pass extends StatelessWidget {
                     );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary:Color.fromARGB(255, 71, 10, 183),
+                  backgroundColor: Color.fromARGB(255, 71, 10, 183),
                   fixedSize: Size(250,50),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(45)),
@@ -111,7 +111,7 @@ class forgot_pass extends StatelessWidget {
                                   child: Row(
                                     // ignore: prefer_const_literals_to_create_immutables
                                     children: [
-                                      Icon(Icons.whatsapp_outlined, color: Colors.green,),
+                                      Icon(Icons.wechat_outlined, color: Colors.green,),
                                       SizedBox( width: 10),
                                       Text('Chat Via Message')
                                     ],

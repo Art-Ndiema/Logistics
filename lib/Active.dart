@@ -115,7 +115,7 @@ class Active extends StatelessWidget {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  primary: Color.fromARGB(255, 222, 207, 250),
+                                  backgroundColor: Color.fromARGB(255, 222, 207, 250),
                                   fixedSize: Size(300, 50),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(45)),
