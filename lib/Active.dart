@@ -2,8 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:trial/Trackinginfo.dart';
-import 'profile.dart';
-import 'Trackinginfo.dart';
 
 class Active extends StatelessWidget {
   const Active({Key? key}) : super(key: key);
@@ -31,9 +29,7 @@ class Active extends StatelessWidget {
             )),
       ),
       body: Stack(
-        
         children: [
-          
           Positioned(
             left: 0,
             right: 0,
@@ -115,7 +111,8 @@ class Active extends StatelessWidget {
                                   );
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color.fromARGB(255, 222, 207, 250),
+                                  backgroundColor:
+                                      Color.fromARGB(255, 222, 207, 250),
                                   fixedSize: Size(300, 50),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(45)),
@@ -124,7 +121,8 @@ class Active extends StatelessWidget {
                                   'More details',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color: Color.fromARGB(255, 71, 10, 183),fontSize: 20),
+                                      color: Color.fromARGB(255, 71, 10, 183),
+                                      fontSize: 20),
                                 ),
                               ),
                             ),

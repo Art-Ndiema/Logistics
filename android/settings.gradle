@@ -1,3 +1,18 @@
+pluginManagement {
+    def flutterSdkPath = settings.hasProperty('flutter-sdk') ? settings.property('flutter-sdk') : '*'
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven {
+            url = uri("${flutterSdkPath}/packages/flutter_tools/gradle/")
+        }
+    }
+    plugins {
+        id 'org.jetbrains.kotlin.android' version '1.9.20'
+    }
+}
+
 include ':app'
 
 def localPropertiesFile = new File(rootProject.projectDir, "local.properties")
